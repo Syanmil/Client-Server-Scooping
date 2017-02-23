@@ -11,7 +11,17 @@
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.7/semantic.min.js"></script>
   </head>
   <body>
-    <h1>Hello World!!</h1>
-  <script src="index.js"></script>
+    <div class="ui container">
+      <div class="ui text container">
+        <h1>Hello World!!</h1>
+        <button id="changer" class="button ui" data-heading="I'm Reborn to This World!!!" onclick="change()">Title Changer</button>
+      </div>
+    </div>
+  <script type="text/javascript">
+    function change (){
+      var changer = document.getElementById('changer');
+      $('h1').text(changer.getAttribute('data-heading'))
+    }
+  </script>
   </body>
 </html>
