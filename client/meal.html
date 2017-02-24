@@ -28,17 +28,16 @@
         </a>
       </div>
     </div>
-    <div class="ui container">
-      <div class="ui text container">
-        <h1>Hello World!!</h1>
-        <button id="changer" class="button ui" data-heading="I'm Reborn to This World from data-heading!!!" onclick="dataChange()">Title Changer</button>
-      </div>
+    <div class="ui text container">
+      <h1>Hello World!!</h1>
+      <button id="meals" class="ui button" onclick="getMeal()">Get Meal</button>
     </div>
-  <script type="text/javascript">
-    function dataChange (){
-      var changer = document.getElementById('changer');
-      $('h1').text(changer.getAttribute('data-heading'))
-    }
-  </script>
+    <script type="text/javascript">
+      var meals = ['Rice', 'Bread', 'Meat', 'Veggie', 'Snack', 'Tempeh', 'Banana']
+      function getMeal() {
+        let eat = meals[Math.floor(Math.random()*meals.length)]
+        $('h1').text(eat+' from global javascript variable')
+      }
+    </script>
   </body>
 </html>

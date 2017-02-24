@@ -20,7 +20,7 @@
         <a href="index.html" class="item">
           Home
         </a>
-        <a href="skills.html?skill=sekarang+saya+punya+skills" class="item">
+        <a href="skills.html?skill=sekarang+saya+punya+skills+dari+url" class="item">
           Skills
         </a>
         <a href="meal.html" class="item">
@@ -28,17 +28,16 @@
         </a>
       </div>
     </div>
-    <div class="ui container">
-      <div class="ui text container">
-        <h1>Hello World!!</h1>
-        <button id="changer" class="button ui" data-heading="I'm Reborn to This World from data-heading!!!" onclick="dataChange()">Title Changer</button>
-      </div>
+    <div class="ui text container">
+      <h1>Hello World!!</h1>
+      <button id="skills" class="ui button" onclick="changeviaurl()">Skill Change</button>
     </div>
-  <script type="text/javascript">
-    function dataChange (){
-      var changer = document.getElementById('changer');
-      $('h1').text(changer.getAttribute('data-heading'))
-    }
-  </script>
+    <script type="text/javascript">
+      function changeviaurl() {
+        let skill = (window.location.search).split('=')[1]
+        skill = skill.split('+').join(' ')
+        $('h1').text(skill)
+      }
+    </script>
   </body>
 </html>
